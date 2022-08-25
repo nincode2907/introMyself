@@ -49,18 +49,6 @@ body {
   transition: width 0.5s ease;
 }
 
-@media screen and (max-width: 768px) {
-  .link__list__item {
-    min-width: 320px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .link__list__item {
-    min-width: 240px;
-  }
-}
-
 .link__list__item:hover {
   background-color: #dce0e3;
   cursor: pointer;
@@ -92,4 +80,21 @@ body {
   background-size: cover;
   background-position: 50% 50%;
   filter: brightness(0.8);
+}
+
+@media screen and (max-width: 768px) {
+  .link__list__item {
+    min-width: 320px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .infor img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .link__list__item {
+    min-width: 240px;
+  }
 }
