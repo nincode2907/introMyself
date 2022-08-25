@@ -1,0 +1,18 @@
+VANTA.BIRDS({
+    el: "#particles-js",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.0,
+    minWidth: 200.0,
+    scale: 1.0,
+    scaleMobile: 1.0,
+    color1: 0x6e3e3e,
+    color2: 0xffc3,
+    birdSize: 1.8,
+    separation: 59.0,
+    alignment: 56.0,
+    cohesion: 15.0,
+    quantity: 2.0,
+    backgroundAlpha: 0.0,
+});
