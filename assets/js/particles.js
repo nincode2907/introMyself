@@ -229,4 +229,4 @@ const snow = {
 const d = new Date();
 let day = d.getDay();
 
-particlesJS("particles-js", (day % 2 == 1) ? polygon : snow);
+particlesJS("particles-js", (day % 2 == 0) ? polygon : snow);

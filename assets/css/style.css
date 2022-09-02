@@ -15,6 +15,7 @@ body {
 .wrapper {
   position: absolute;
   z-index: 9;
+  user-select: none;
 }
 
 .infor {
@@ -28,6 +29,7 @@ body {
   border-radius: 50%;
   border: 1px solid rgb(61, 59, 59);
   background-position: center;
+  cursor: zoom-in;
 }
 
 .infor p {
