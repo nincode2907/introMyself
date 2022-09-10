@@ -19,3 +19,20 @@ if (day % 3 == 0) {
 } else {
     particlesJS("particles-js", (day % 3 == 1) ? Particles.polygon : Particles.snow);
 }
+
+//play music
+const music = document.querySelector(".music");
+const song = document.getElementById("song");
+music.addEventListener("click", () => {
+    if (music.classList.contains("music--playing")) {
+        music.classList.remove("music--playing");
+        song.pause();
+    } else {
+        music.classList.add("music--playing");
+        song.play();
+    }
+})
+
+song.addEventListener("ended", () => {
+    music.classList.remove("music--playing");
+})

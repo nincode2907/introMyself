@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,400;1,600&display=swap");
+:root {
+  --song_name: "Già Cùng Nhau Là Được";
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -35,16 +39,97 @@ body {
   margin-bottom: 10px;
 }
 
-.infor .author {
+.author {
   font-size: 18px;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 4px;
 }
 
-.infor .bio {
+.bio {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
+}
+
+.music {
+  font-size: 17px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 15px 40px 15px 70px;
+  margin: 0 50px;
+  background-color: rgba(0, 0, 0, 0.18);
+  color: #fff;
+  text-align: left;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.music::before {
+  content: "\f04b";
+  position: absolute;
+  left: 28px;
+  color: #fff;
+  font-size: 20px;
+  font-family: "FontAwesome";
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.music--playing.music::before {
+  content: "\f04c";
+}
+
+.song_button {
+  position: absolute;
+  left: 0;
+  height: 100px;
+  width: 60px;
+}
+
+.song_name {
+  overflow: hidden;
+  width: 100%;
+  height: 20px;
+  position: relative;
+}
+
+.song_name::before {
+  content: var(--song_name);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transition: all 1s ease;
+}
+
+.song_name::after {
+  content: var(--song_name);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: -320px;
+  transition: all 1s ease;
+}
+
+.music--playing .song_name::before,
+.music--playing .song_name::after {
+  animation: nameAni 8s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes nameAni {
+  0% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-320px);
+  }
+  100% {
+    transform: translateX(-320px);
+  }
 }
 
 .link {
@@ -102,25 +187,56 @@ body {
 
 @media screen and (max-width: 768px) {
   .wrapper {
-    width: 420px;
+    width: 500px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .wrapper {
-    width: 360px;
+    width: 440px;
+  }
+
+  .music {
+    padding: 15px 30px 15px 60px;
+    margin: 0 20px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .wrapper {
-    width: 320px;
+    width: 400px;
+  }
+
+  .music {
+    padding: 15px 20px 15px 50px;
+    margin: 0 20px;
+  }
+
+  .music::before {
+    left: 20px;
+  }
+
+  .song_name::before,
+  .song_name::after {
+    width: 120%;
+  }
+
+  @keyframes nameAni {
+    0% {
+      transform: translateX(0);
+    }
+    75% {
+      transform: translateX(-280px);
+    }
+    100% {
+      transform: translateX(-280px);
+    }
   }
 }
 
 @media screen and (max-width: 400px) {
   .wrapper {
-    width: 260px;
+    width: 320px;
   }
 }
 
@@ -131,6 +247,6 @@ body {
   }
 
   .wrapper {
-    width: 240px;
+    width: 290px;
   }
 }
