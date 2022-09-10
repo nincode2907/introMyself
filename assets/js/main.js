@@ -12,7 +12,7 @@ document.addEventListener("contextmenu", e => e.preventDefault());
 
 //display animation with day
 const d = new Date();
-let day = d.getDay();
+let day = d.getDate();
 
 if (day % 3 == 0) {
     VANTA.BIRDS(vansta);
