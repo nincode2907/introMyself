@@ -6,7 +6,7 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,11 +16,13 @@ body {
   position: absolute;
   z-index: 9;
   user-select: none;
+  width: 500px;
 }
 
 .infor {
   text-align: center;
   margin-bottom: 36px;
+  padding: 0 15px;
 }
 
 .infor img {
@@ -30,11 +32,24 @@ body {
   border: 1px solid rgb(61, 59, 59);
   background-position: center;
   cursor: zoom-in;
+  margin-bottom: 10px;
 }
 
-.infor p {
+.infor .author {
   font-size: 18px;
+  font-weight: 600;
   font-family: "Montserrat", sans-serif;
+  margin-bottom: 4px;
+}
+
+.infor .bio {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.link {
+  text-align: center;
+  padding: 0 10px;
 }
 
 .link__list__item {
@@ -45,7 +60,6 @@ body {
   display: flex;
   align-items: center;
   height: 44px;
-  min-width: 400px;
   margin-top: 14px;
   position: relative;
   transition: width 0.5s ease;
@@ -56,13 +70,13 @@ body {
   cursor: pointer;
 }
 
-.link__list__item__img {
+.link__list__item__icon {
   position: absolute;
   font-size: 24px;
   margin-left: 16px;
 }
 
-.link__list__item__description {
+.link__list__item__nameSocial {
   color: #35414c;
   font-size: 0.9rem;
   font-weight: 600;
@@ -76,27 +90,47 @@ body {
 #particles-js {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
   background-image: url("../img/mountain.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 50% 65%;
   filter: brightness(0.8);
 }
 
 @media screen and (max-width: 768px) {
-  .link__list__item {
-    min-width: 320px;
+  .wrapper {
+    width: 420px;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 360px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wrapper {
+    width: 260px;
+  }
+}
+
+@media screen and (max-width: 350px) {
   .infor img {
     width: 100px;
     height: 100px;
   }
 
-  .link__list__item {
-    min-width: 240px;
+  .wrapper {
+    width: 240px;
   }
 }

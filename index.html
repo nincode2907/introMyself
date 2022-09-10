@@ -15,35 +15,47 @@
     <div class="wrapper">
       <div class="infor">
         <img src="./assets/img/avatar.jpg" alt="avatar" id="avatar" />
-        <p>ninbui</p>
+        <p class="author">@ninbui</p>
+        <p class="bio">
+          Nếu cuộc đời dễ dàng thì ta đã không đến thế giới này bằng tiếng khóc
+        </p>
       </div>
       <div class="link">
         <ul class="link__list">
           <li class="link__list__item">
             <i
-              class="fa-solid fa-mobile-screen-button link__list__item__img"
+              class="fa-solid fa-mobile-screen-button link__list__item__icon"
             ></i>
             <a
               href="tel:0337407743"
-              class="link__list__item__description"
+              class="link__list__item__nameSocial"
               target="blank"
               >Mobile Phone</a
             >
           </li>
           <li class="link__list__item">
-            <i class="fa-brands fa-facebook link__list__item__img"></i>
+            <i class="fa-brands fa-facebook link__list__item__icon"></i>
             <a
               href="https://www.facebook.com/nin.bui.5688"
-              class="link__list__item__description"
+              class="link__list__item__nameSocial"
               target="blank"
               >Facebook</a
             >
           </li>
           <li class="link__list__item">
-            <i class="fa-brands fa-github link__list__item__img"></i>
+            <i class="fa-brands fa-instagram link__list__item__icon"></i>
+            <a
+              href="https://www.instagram.com/n.all.ez/"
+              class="link__list__item__nameSocial"
+              target="blank"
+              >Instagram</a
+            >
+          </li>
+          <li class="link__list__item">
+            <i class="fa-brands fa-github link__list__item__icon"></i>
             <a
               href="https://github.com/nincode2907"
-              class="link__list__item__description"
+              class="link__list__item__nameSocial"
               target="blank"
               >Github</a
             >
@@ -54,22 +66,12 @@
     <div id="particles-js"></div>
 
     <!-- particles-js -->
-
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="./assets/js/particles.js"></script>
 
     <!-- vanta bird -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script> -->
-
-    <!-- facebook async sdk -->
-    <!-- <script
-      async
-      defer
-      crossorigin="anonymous"
-      src="https://connect.facebook.net/en_US/sdk.js"
-    ></script> -->
-    <script src="./assets/js/main.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
   </body>
 </html>

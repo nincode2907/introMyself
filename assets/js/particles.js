@@ -1,4 +1,4 @@
-const polygon = {
+export const polygon = {
     "particles": {
         "number": {
             "value": 140,
@@ -115,7 +115,7 @@ const polygon = {
     }
 };
 
-const snow = {
+export const snow = {
     "particles": {
         "number": {
             "value": 327,
@@ -226,7 +226,3 @@ const snow = {
     "retina_detect": true
 };
 
-const d = new Date();
-let day = d.getDay();
-
-particlesJS("particles-js", (day % 2 == 0) ? polygon : snow);
