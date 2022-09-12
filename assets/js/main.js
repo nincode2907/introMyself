@@ -7,6 +7,7 @@ const background = document.getElementById("particles-js")
 //open avatar in current tab
 avatar.onclick = (e) => {
     window.open(avatar.getAttribute("src"), "_self");
+    music.classList.remove("music--playing");
     song.pause();
 }
 
