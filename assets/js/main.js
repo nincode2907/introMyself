@@ -5,7 +5,10 @@ const avatar = document.getElementById("avatar");
 const background = document.getElementById("particles-js")
 
 //open avatar in current tab
-avatar.onclick = (e) => window.open(avatar.getAttribute("src"), "_self");
+avatar.onclick = (e) => {
+    window.open(avatar.getAttribute("src"), "_self");
+    song.pause();
+}
 
 //cancel open devtool with right mouse
 document.addEventListener("contextmenu", e => e.preventDefault());
