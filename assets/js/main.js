@@ -3,6 +3,8 @@ import vansta from "./vanta_bird.js"
 
 const avatar = document.getElementById("avatar");
 const music = document.querySelector(".music");
+const intro = document.querySelector('.intro')
+const main = document.querySelector(".main")
 const sound = new Howl({
     src: "./assets/music/Gia Cung Nhau La Duoc - Tung TeA_ PC_ Vo.mp3",
 });
@@ -36,3 +38,10 @@ music.addEventListener("click", () => {
 })
 
 sound.on('end', () => music.classList.remove("music--playing"));
+
+//intro
+window.addEventListener("load", function () {
+    setTimeout(function () {
+        intro.style.display = "none"
+    }, 3000)
+})

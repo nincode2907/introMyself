@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,400;1,600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,400;1,600&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,400;1,600&family=Pacifico&display=swap");
 :root {
   --song_name: "Già Cùng Nhau Là Được";
+  --time_intro: 3s;
 }
 
 * {
@@ -10,10 +12,72 @@
 }
 
 body {
+}
+
+.main {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.intro::before {
+  content: "Hello mọi người mình là Chao đây!";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  opacity: 0;
+  font-size: 60px;
+  color: rgba(154, 154, 154, 0.2);
+  font-family: "Pacifico", cursive;
+  text-transform: capitalize;
+  animation: introA var(--time_intro) linear forwards;
+  z-index: 99999;
+}
+
+@keyframes introA {
+  0% {
+    color: 0.2;
+    opacity: 1;
+  }
+  20% {
+    color: rgba(154, 154, 154, 0.4);
+    opacity: 1;
+  }
+  40% {
+    color: rgba(154, 154, 154, 1);
+    opacity: 1;
+  }
+  50% {
+    color: rgba(154, 154, 154, 1);
+    opacity: 1;
+  }
+  60% {
+    color: rgba(154, 154, 154, 0.4);
+    opacity: 1;
+  }
+  85% {
+    color: rgba(154, 154, 154, 0.2);
+    opacity: 1;
+  }
+  100% {
+    color: rgba(154, 154, 154, 0);
+    opacity: 0;
+  }
 }
 
 .wrapper {
@@ -21,6 +85,7 @@ body {
   z-index: 9;
   user-select: none;
   width: 500px;
+  overflow: hidden;
 }
 
 .infor {
@@ -35,8 +100,8 @@ body {
   border-radius: 50%;
   border: 1px solid rgb(61, 59, 59);
   background-position: center;
-  cursor: zoom-in;
   margin-bottom: 10px;
+  cursor: zoom-in;
 }
 
 .author {
@@ -148,6 +213,31 @@ body {
   margin-top: 14px;
   position: relative;
   transition: width 0.5s ease;
+  animation: slideA 500ms ease-out forwards;
+}
+
+.link__list__item:nth-child(1) {
+  transform: translateX(-100px);
+  animation-delay: calc(var(--time_intro) - 2ms);
+}
+.link__list__item:nth-child(2) {
+  transform: translateX(100px);
+  animation-delay: calc(var(--time_intro) + 100ms);
+}
+.link__list__item:nth-child(3) {
+  transform: translateX(-100px);
+  animation-delay: calc(var(--time_intro) + 200ms);
+}
+
+.link__list__item:nth-child(4) {
+  transform: translateX(100px);
+  animation-delay: calc(var(--time_intro) + 300ms);
+}
+
+@keyframes slideA {
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .link__list__item:hover {
@@ -189,6 +279,10 @@ body {
   .wrapper {
     width: 500px;
   }
+
+  .intro::before {
+    font-size: 48px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -205,6 +299,10 @@ body {
 @media screen and (max-width: 500px) {
   .wrapper {
     width: 400px;
+  }
+
+  .intro::before {
+    font-size: 36px;
   }
 
   .music {
@@ -244,6 +342,10 @@ body {
   .infor img {
     width: 100px;
     height: 100px;
+  }
+
+  .intro::before {
+    font-size: 28px;
   }
 
   .wrapper {
