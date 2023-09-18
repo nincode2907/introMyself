@@ -29,7 +29,7 @@ body {
 }
 
 .intro::before {
-  content: "Hello mọi người mình là Chao đây!";
+  content: "Hello mọi người mình là Nin đây!";
   position: absolute;
   display: flex;
   align-items: center;

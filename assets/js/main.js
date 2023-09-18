@@ -4,9 +4,8 @@ import vansta from "./vanta_bird.js"
 const avatar = document.getElementById("avatar");
 const music = document.querySelector(".music");
 const intro = document.querySelector('.intro')
-const main = document.querySelector(".main")
 const sound = new Howl({
-    src: "./assets/music/Gia Cung Nhau La Duoc - Tung TeA_ PC_ Vo.mp3",
+    src: "./assets/music/gia_cung_nhau_la_duoc.mp3",
 });
 
 //open avatar in current tab
@@ -20,7 +19,7 @@ document.addEventListener("contextmenu", e => e.preventDefault());
 const d = new Date();
 let day = d.getDate();
 
-if (day % 3 == 0) {
+if (day % 0 == 0) {
     VANTA.BIRDS(vansta);
 } else {
     particlesJS("particles-js", (day % 3 == 1) ? Particles.polygon : Particles.snow);
