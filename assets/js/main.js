@@ -19,7 +19,7 @@ document.addEventListener("contextmenu", e => e.preventDefault());
 const d = new Date();
 let day = d.getDate();
 
-if (day % 0 == 0) {
+if (day % 3 == 0) {
     VANTA.BIRDS(vansta);
 } else {
     particlesJS("particles-js", (day % 3 == 1) ? Particles.polygon : Particles.snow);
